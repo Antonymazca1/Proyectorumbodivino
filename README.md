@@ -45,3 +45,30 @@ AplicacionWebPersonal/
 │
 └── data/
     └── messages.json
+
+
+## PASO 1: Instalar Python
+Asegúrese de tener Python 3 instalado.
+
+Verificar instalación:
+```bash
+python --version
+
+Ejecutar el servidor
+_______________________________
+Abrir la terminal en Visual Studio Code.
+
+Ejecutar:
+
+python server.py
+Si todo está correcto, se mostrará:
+
+Servidor activo en http://localhost:8000
+_________________________________________
+Visualizar la aplicación
+
+Abrir el navegador web.
+
+Ingresar:
+
+http://localhost:8000
