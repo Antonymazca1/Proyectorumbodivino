@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Admin | Mensajes</title>
+  <link rel="stylesheet" href="/static/css/styles.css"/>
+</head>
+<body>
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="/">
+      <img src="/static/img/avatar.jpg" alt="Avatar"/>
+      <div class="title">
+        <strong>Panel Admin</strong>
+        <span>Mensajes recibidos</span>
+      </div>
+    </a>
+    <a class="btn small" href="/contact">Ir a Contacto</a>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <h2>Mensajes</h2>
+    <p class="lead">Lista de mensajes guardados (persistencia en archivo JSON).</p>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Email</th>
+          <th>Asunto</th>
+          <th>Mensaje</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{rows}}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">Admin • Hecho con Python puro</div>
+</footer>
+</body>
+</html>

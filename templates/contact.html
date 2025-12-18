@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Oración | Rumbo Divino</title>
+  <link rel="stylesheet" href="/static/css/styles.css"/>
+</head>
+<body>
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="/">
+      <img src="/static/img/logo.png" alt="Logo"/>
+      <div class="t">
+        <strong>Rumbo Divino</strong>
+        <span>Petición de oración</span>
+      </div>
+    </a>
+
+    <nav class="nav-links">
+      <a href="/about">Misión</a>
+      <a href="/messages">Mensajes</a>
+      <a href="/resources">Versículos</a>
+      <a href="/contact">Oración</a>
+      <a href="/login">Admin</a>
+    </nav>
+
+    <a class="btn small" href="/resources">Ver versículos</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container banner-wrap">
+    <div class="banner" style="min-height:260px">
+      <div class="banner-center">
+        <div class="inner">
+          <div class="pill">🙏 Oración • <b>No estás solo</b> • Dios te escucha</div>
+          <h1>Escríbeme tu petición.</h1>
+          <p>
+            Puedes enviar tu petición de oración. Se guardará de forma segura en el servidor (JSON)
+            para que pueda leerla y orar por ti.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="#form">Enviar ahora</a>
+            <a class="btn" href="/messages">Leer mensajes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="side">
+      <div class="side-top">
+        <img src="/static/img/logo.png" alt="Logo"/>
+        <div>
+          <strong>Promesa</strong>
+          <span>Palabra para tu corazón</span>
+        </div>
+      </div>
+
+      <div class="quote">
+        “Clama a mí, y yo te responderé…”<br/>
+        <span style="color:var(--muted)">Jeremías 33:3</span>
+      </div>
+
+      <div class="badges">
+        <div class="badge">Familia</div>
+        <div class="badge">Salud</div>
+        <div class="badge">Finanzas</div>
+        <div class="badge">Paz</div>
+      </div>
+
+      <div style="margin-top:12px; color:rgba(242,246,255,.78); line-height:1.7; font-size:13px">
+        Consejo: escribe con calma y sé específico. Dios conoce tu necesidad.
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="section" id="form">
+  <div class="container split">
+    <div>
+      <h2>Formulario de petición</h2>
+      <p class="lead">
+        Completa el formulario. Tiene validación (JavaScript) y contador de caracteres.
+      </p>
+
+      <div class="card">
+        <h3>¿Qué pasa con tu mensaje?</h3>
+        <p>
+          • Se envía al servidor Python (POST).<br/>
+          • Se guarda en <b>data/messages.json</b>.<br/>
+          • Se visualiza en <b>/admin</b> con contraseña.
+        </p>
+      </div>
+
+      <div class="quote">
+        “Echando toda vuestra ansiedad sobre él, porque él tiene cuidado de vosotros.”<br/>
+        <span style="color:var(--muted)">1 Pedro 5:7</span>
+      </div>
+    </div>
+
+    <div class="form">
+      <form id="contactForm" method="POST" action="/contact">
+        <input class="input" type="text" name="name" id="name" placeholder="Tu nombre"/>
+        <input class="input" type="email" name="email" id="email" placeholder="Tu correo"/>
+        <input class="input" type="text" name="subject" placeholder="Tema (ej: familia, salud, trabajo)"/>
+        <textarea name="content" id="content" placeholder="Escribe tu petición..."></textarea>
+
+        <div class="helper">
+          <span id="counter">0 / 300</span>
+          <button class="btn primary" type="submit">Enviar petición</button>
+        </div>
+
+        <div id="error" class="error"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">Rumbo Divino • Oración</div>
+</footer>
+
+<script src="/static/js/main.js"></script>
+</body>
+</html>
